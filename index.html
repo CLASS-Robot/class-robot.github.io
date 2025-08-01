@@ -139,7 +139,7 @@
             CLASS on 5 simulation benchmarks and 3 real-world tasks to achieve competi-
             tive results using retrieval-based control with representations only. Most notably,
             for downstream policy learning under significant visual shifts, Diffusion Policy
-            with CLASS pre-training achieves an average success rate of 70%, while all other
+            with CLASS pre-training achieves an average success rate of 75%, while all other
             baseline methods fail to perform competitively.
           </p>
 
@@ -164,18 +164,23 @@
 </section>
 
 </section>
-  <div class="columns is-centered">
-    <h2 class="title is-3">Results</h2>    
-    <div class="content has-text-justified">
-      <p>
-        Description of your image or results goes here.
-      </p>
-    </div>
-    
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Limitations of Behavior Cloning</h2>        
     <div class="content has-text-centered">
       <img src="./static/images/main.png"
           alt="Description of your image"
-          width="75%">
+          width="99%">
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        <b>Comparison between Behavior Cloning (BC) and Contrastive Learning via Action Sequence Supervision (CLASS).</b>
+        <b>(A)</b> With homogeneous demonstrations with consistent visual
+        conditions, BC learns a compact representation with high transferability. <b>(B)</b> With heterogeneous
+        demonstrations such as varying viewpoints, BC overfits to individual state-action pairs and generalizes 
+        poorly. <b>(C)</b> CLASS addresses this by attracting states with similar action sequences and
+        repelling those with dissimilar ones, with a soft supervised contrastive learning objective to learn
+        more robust and composable representations.
+      </p>
     </div>
       </div>
 </section>
@@ -184,7 +189,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+      <video id="teaser" autoplay controls muted playsinline height="100%">
         <source src="./static/videos/overview.mp4"
                 type="video/mp4">
       </video>
@@ -194,50 +199,28 @@
   </div>
 </section>
 
-<section class="section">
+</section>
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Datasets?</h2>
-    <div class="columns is-centered">
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-4">Stacking</h2>
-          <p>
-            <!-- Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall. -->
-          </p>
-          <video id="stacking" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/stack_dloss.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-4">Pushing</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-            </p>
-            <video id="stacking" autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/push_dloss.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
+    <h2 class="title is-3">Heterogeneous Datasets</h2>        
+    <div class="content has-text-centered">
+      <img src="./static/images/topdown.png"
+          alt="Description of your image"
+          width="70%">
     </div>
-    <h2 class="title is-4">Plugging</h2>
-    <div class="columns">
-      <div class="column content" style="text-align: left;">
-        <video id="stacking" autoplay muted controls loop playsinline style="width: 45%; height: auto;">
-          <source src="./static/videos/plug_desc.mp4" type="video/mp4">
-        </video>
-      </div>
+    <div class="content has-text-justified">
+      <p>
+        <b>Heterogeneous data collection setups.</b> <b>(A)</b> Fixed camera (Fixed-Cam), commonly
+        used in conventional behavior cloning pipelines. <b>(B)</b> Random static camera (Rand-Cam), where
+        the camera pose is randomly sampled at the start of each episode but remains fixed during the
+        episode. <b>(C)</b> Dynamic camera (Dyn-Cam), where a randomly initialized camera moves during the
+        episode with a random direction while maintaining a consistent look-at target. <b>(D)</b> Fixed object
+        color (Fixed-Color), commonly assumed in vision-based behavior cloning tasks. <b>(E)</b> Random object 
+        color (Rand-Color), where the color of the objects is randomly varied in each demonstration.
+        <b>(F)</b> 
+      </p>
     </div>
-  </section>
+      </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -256,14 +239,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{lee2024diffdaggeruncertaintyestimationdiffusion,
-      title={Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation}, 
-      author={Sung-Wook Lee and Yen-Ling Kuo},
-      year={2024},
-      eprint={2410.14868},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2410.14868}, 
+    <pre><code>@inproceedings{lee2024class,
+      title={CLASS: Contrastive Learning via Action Sequence Supervision for Robot Manipulation}, 
+      author={Lee, Sung-Wook and Kang, Xuhui and Yang, Brandon and Kuo, Yen-Ling},
+      booktitle={Conference on Robot Learning (CoRL)},
+      year={2025}, 
 }</code></pre>
   </div>
 </section>
