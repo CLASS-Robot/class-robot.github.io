@@ -1,13 +1,10 @@
-# Nerfies
-
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
-
-If you find Nerfies useful for your work please cite:
+If you find CLASS useful for your work please cite:
 ```
-@article{,
-  author    = {Sung-Wook Lee, Yen-Ling Kuo},
-  title     = {Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation},  
-  year      = {2024},
+@inproceedings{lee2024diff,
+      title={CLASS: Contrastive Learning via Action Sequence Supervision for Robot Manipulation}, 
+      author={Lee, Sung-Wook and Kang, Xuhui and Yang, Brandon and Kuo, Yen-Ling},
+      booktitle={Conference on Robot Learning (Corl)},
+      year={2025}, 
 }
 ```
 

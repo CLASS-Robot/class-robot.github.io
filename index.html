@@ -48,10 +48,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation</h1>
+          <h1 class="title is-1 publication-title">	CLASS: Contrastive Learning via Action Sequence Supervision for Robot Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="">Sung-Wook Lee</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Xuhui Kang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Brandon Yang</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="">Yen-Ling Kuo</a><sup>1</sup>,</span>
             </span>
@@ -84,7 +88,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/Q0Clb91ATa8"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -94,7 +98,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/sean1295/CLASS/tree/main"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -120,36 +124,62 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recently, diffusion policy has shown impressive results in handling multi-modal tasks in robotic manipulation. 
-            However, it has fundamental limitations in out-of-distribution failures that persist due to compounding errors and its limited capability to extrapolate. 
-            One way to address these limitations is robot-gated DAgger, an interactive imitation learning with a robot query system to actively seek expert help during policy rollout. 
-            While robot-gated DAgger has high potential for learning at scale, existing methods like Ensemble-DAgger struggle with highly expressive policies: 
-            They often misinterpret policy disagreements as uncertainty at multi-modal decision points.        
-            To address this problem, we introduce Diff-DAgger, an efficient robot-gated DAgger algorithm that leverages the training objective of diffusion policy. 
-            We evaluate Diff-DAgger across different robot tasks including stacking, pushing, and plugging, and show that Diff-DAgger improves the task failure prediction by 37%, 
-            the task completion rate by 14%, and reduces the wall-clock time by up to 540%. 
-            We hope that this work opens up a path for efficiently incorporating expressive yet data-hungry policies into interactive robot learning settings.
+            Recent advances in Behavior Cloning (BC) have led to strong perfor-
+            mance in robotic manipulation, driven by expressive models, sequence modeling
+            of actions, and large-scale demonstration data. However, BC faces significant
+            challenges when applied to heterogeneous datasets, such as visual shift with differ-
+            ent camera poses or object appearances, where performance degrades despite the
+            benefits of learning at scale. This stems from BC’s tendency to overfit individual
+            demonstrations rather than capture shared structure, limiting generalization. To
+            address this, we introduce Contrastive Learning via Action Sequence Supervision
+            (CLASS), a method for learning behavioral representations from demonstrations
+            using supervised contrastive learning. CLASS leverages weak supervision from
+            similar action sequences identified via Dynamic Time Warping (DTW) and opti-
+            mizes a soft InfoNCE loss with similarity-weighted positive pairs. We evaluate
+            CLASS on 5 simulation benchmarks and 3 real-world tasks to achieve competi-
+            tive results using retrieval-based control with representations only. Most notably,
+            for downstream policy learning under significant visual shifts, Diffusion Policy
+            with CLASS pre-training achieves an average success rate of 70%, while all other
+            baseline methods fail to perform competitively.
           </p>
 
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
   </div>
 </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/meme.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section>
+
+</section>
+  <div class="columns is-centered">
+    <h2 class="title is-3">Results</h2>    
+    <div class="content has-text-justified">
+      <p>
+        Description of your image or results goes here.
+      </p>
+    </div>
+    
+    <div class="content has-text-centered">
+      <img src="./static/images/main.pdf" 
+          alt="Description of your image"
+          width="75%">
+    </div>
+      </div>
+</section>
+
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -164,10 +194,9 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Can diffusion loss predict task failure?</h2>
+    <h2 class="title is-3">Datasets?</h2>
     <div class="columns is-centered">
       <!-- Visual Effects. -->
       <div class="column">
