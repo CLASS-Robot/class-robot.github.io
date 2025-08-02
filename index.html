@@ -165,7 +165,7 @@
 
 </section>
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Limitations of Behavior Cloning</h2>        
+    <h2 class="title is-4">Limitations of Behavior Cloning</h2>        
     <div class="content has-text-centered">
       <img src="./static/images/main.png"
           alt="Description of your image"
@@ -186,6 +186,7 @@
 </section>
 
 
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -201,7 +202,7 @@
 
 </section>
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Heterogeneous Datasets</h2>        
+    <h2 class="title is-4">Heterogeneous Datasets</h2>        
     <div class="content has-text-centered">
       <img src="./static/images/topdown.png"
           alt="Description of your image"
@@ -223,16 +224,92 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Real World Tasks</h2>
-    WIP
+    <h2 class="title is-3">Results</h2>
+      <h2 class="title is-4">Simulation</h2>
+    CLASS consistently improves success rates across all tasks and policy classes: Across the static and dynamic 
+    settings, it achieves <b>85%</b> success rate with \textbf{MLP} and <b>91%</b> with <b>Diffusion Policy (DP)
+    </b> on average, significantly outperforming the best baselines, which reach only 63% and 77%, respectively. 
+    Larger gains are observed under dynamic camera and random object color setups, where CLASS achieves mean 
+    success rates of <b>76%</b> (MLP) and <b>85%</b>(DP), compared to <b>32%</b> and <b>57%</b> from the best 
+    baselines. In the non-parametric (Rep-Only) setting, CLASS achieves success rates comparable to parametric 
+    DP, despite using no policy head, with only a <b>9%</b> drop in mean success rate with an average of 
+    <b>83%</b> across all tasks.
     <div class="columns is-centered">
   </div>
-
-    
-
-
   </div>
 </section>
+
+
+
+
+
+<!-- <section class="section">
+  <div class="container">
+    <h2 class="title is-4 has-text-centered">Rollouts</h2>
+
+    <!-- Repeat for each task -->
+    <div class="box">
+      <h3 class="title is-4 has-text-centered">Square Task</h3>
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <h4 class="subtitle is-6">BC</h4>
+          <video controls muted playsinline style="max-width: 100%; height: auto;">
+            <source src="/static/videos/CLASS_square_rollout.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half has-text-centered">
+          <h4 class="subtitle is-6">CLASS</h4>
+          <video controls muted playsinline style="max-width: 100%; height: auto;">
+            <source src="/static/videos/CLASS_square_rollout.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 class="title is-4 has-text-centered">Three-Stack Task</h3>
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <h4 class="subtitle is-6">BC</h4>
+          <video controls muted playsinline style="max-width: 100%; height: auto;">
+            <source src="/static/videos/CLASS_three_stack_rollout.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half has-text-centered">
+          <h4 class="subtitle is-6">CLASS</h4>
+          <video controls muted playsinline style="max-width: 100%; height: auto;">
+            <source src="/static/videos/BC_three_stack_rollout.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 class="title is-4 has-text-centered">Push-T Task</h3>
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <h4 class="subtitle is-6">BC</h4>
+          <video controls muted playsinline style="max-width: 100%; height: auto;">
+            <source src="/static/videos/CLASS_push_t_rollout.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half has-text-centered">
+          <h4 class="subtitle is-6">CLASS</h4>
+          <video controls muted playsinline style="max-width: 100%; height: auto;">
+            <source src="/static/videos/BC_push_t_rollout.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+
+
+
+
 
 
 <section class="section" id="BibTeX">
