@@ -1,6 +1,6 @@
 If you find CLASS useful for your work please cite:
 ```
-@inproceedings{lee2024class,
+@inproceedings{lee2025class,
       title={CLASS: Contrastive Learning via Action Sequence Supervision for Robot Manipulation}, 
       author={Lee, Sung-Wook and Kang, Xuhui and Yang, Brandon and Kuo, Yen-Ling},
       booktitle={Conference on Robot Learning (CoRL)},
