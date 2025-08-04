@@ -203,10 +203,15 @@
 </section>
 
 
+<style>
+.homogeneous { color: rgba(226, 96, 96, 0.808); }
+.heterogeneous { color: rgb(119, 93, 233); }
+</style>
+
 <br><br>
 </section>
   <div class="container is-max-desktop">
-    <h2 class="title is-4">Heterogeneous Datasets</h2>        
+    <h2 class="title is-4" style="white-space: pre;">Homogeneous Datasets   vs   Heterogeneous Datasets</h2>       
     <div class="content has-text-centered">
       <img src="./static/images/topdown.png"
           alt="Description of your image"
@@ -214,13 +219,13 @@
     </div>
     <div class="content has-text-justified">
       <p>
-        <b>Heterogeneous data collection setups.</b> <b>(A)</b> Fixed camera (Fixed-Cam), commonly
-        used in conventional behavior cloning pipelines. <b>(B)</b> Random static camera (Rand-Cam), where
+        <b><span class="homogeneous">Homogeneous</span>/<span class="heterogeneous">Heterogeneous</span> data collection setups.</b> <b>(A)</b> <span class="homogeneous">Fixed camera (Fixed-Cam)</span>, commonly
+        used in conventional behavior cloning pipelines. <b>(B)</b> <span class="heterogeneous">Random static camera (Rand-Cam)</span>, where
         the camera pose is randomly sampled at the start of each episode but remains fixed during the
-        episode. <b>(C)</b> Dynamic camera (Dyn-Cam), where a randomly initialized camera moves during the
-        episode with a random direction while maintaining a consistent look-at target. <b>(D)</b> Fixed object
-        color (Fixed-Color), commonly assumed in vision-based behavior cloning tasks. <b>(E)</b> Random object 
-        color (Rand-Color), where the color of the objects is randomly varied in each demonstration.
+        episode. <b>(C)</b> <span class="heterogeneous">Dynamic camera (Dyn-Cam)</span>, where a randomly initialized camera moves during the
+        episode with a random direction while maintaining a consistent look-at target. <b>(D)</b> <span class="homogeneous">Fixed object
+        color (Fixed-Color)</span>, commonly assumed in vision-based behavior cloning tasks. <b>(E)</b> <span class="heterogeneous">Random object 
+        color (Rand-Color)</span>, where the color of the objects is randomly varied in each demonstration.
       </p>
     </div>
       </div>
@@ -329,7 +334,63 @@
   </div>
 </section>
 
-
+</section>
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Real-World Experiments</h2>
+      <div class="box">
+          <h3 class="title is-5 has-text-centered">Tasks</h3>
+          <div style="display: flex; gap: 0.5rem;">
+              <div style="flex: 1; text-align: center;">
+                  <h4 class="subtitle is-6">Two-Stack</h4>
+                  <video controls muted playsinline style="width: 100%; max-width: 300px; height: auto;">
+                      <source src="/static/videos/stack.mp4" type="video/mp4">
+                  </video>
+                Two-Stack
+              </div>
+              <div style="flex: 1; text-align: center;">
+                  <h4 class="subtitle is-6">Mug-Hang</h4>
+                  <video controls muted playsinline style="width: 100%; max-width: 300px; height: auto;">
+                      <source src="/static/videos/mug.mp4" type="video/mp4">
+                  </video>
+                Mug-Hang
+              </div>
+              <div style="flex: 1; text-align: center;">
+                  <h4 class="subtitle is-6">Toaster-Load</h4>
+                  <video controls muted playsinline style="width: 100%; max-width: 300px; height: auto;">
+                      <source src="/static/videos/toast.mp4" type="video/mp4">
+                  </video>    
+                Toaster-Load
+              </div>
+          </div>
+          <b>Real-world experiments.</b> We evaluate CLASS on three real-world tasks.          
+      </div>  
+      <div class="box">
+        <h3 class="title is-5 has-text-centered">Camera Placements</h3>
+        <div class="content has-text-centered" style="display: flex; justify-content: center; align-items: flex-start; gap: 2rem;">
+          <div style="text-align: center;">
+            <img src="./static/images/camera.png"
+                alt="Description of your image"
+                width="100%"
+                style="max-width: 400px;">
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+              Visualization of camera poses for the Mug-Hang
+            </p>
+          </div>
+          
+          <div style="text-align: center;">
+            <img src="./static/images/mug_camera.png"
+                alt="Description of your image"
+                width="97.8%"
+                style="max-width: 300px;">
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+              Individual camera positions from <br> 25 random episodes for Mug-Hang
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </h2>
+</section>
 
 
 <section class="section" id="BibTeX">
